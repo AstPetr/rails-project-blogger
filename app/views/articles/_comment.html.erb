@@ -1,5 +1,5 @@
 <div>
-  <h4>Comment by <%= comment.author_name %></h4>
-  <p>Posted <%= distance_of_time_in_words(comment.article.created_at, comment.created_at) %> later</p>
+  <h4><%= comment.author_name %> komentaras</h4>
+  <p>Sukurtas <%= comment.created_at.getlocal.strftime("%Y/%m/%d %H:%M") %> </p>
   <p class="comment"><%= comment.body %></p>
 </div>

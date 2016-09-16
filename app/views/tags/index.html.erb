@@ -1,11 +1,11 @@
-<h1>All Tags</h1>
+<h1>Visos Etiketės</h1>
 
 <ul id="tags">
 	<% @tags.each do |tag| %>
 		<li><%= link_to tag, tag_path(tag) %></li>
-		<%= link_to "delete", tag_path(tag), method: :delete %>
+		<%= link_to "ištrinti", tag_path(tag), method: :delete %>
 	<% end %>
 </ul>
 
 
-<%= link_to "<< Back to Article List", articles_path %>
+<%= link_to "<< Atgal į straipsnių sąrašą", articles_path %>

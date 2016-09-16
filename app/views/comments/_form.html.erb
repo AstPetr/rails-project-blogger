@@ -1,15 +1,15 @@
-<h3>Post a Comment</h3>
+<h3>Rašyk Komentarą</h3>
 
 <%= form_for [ @article, @comment ] do |f| %>
   <p>
-    <%= f.label :author_name, "Your Name" %><br/>
+    <%= f.label :author_name, "Tavo Vardas" %><br/>
     <%= f.text_field :author_name %>
   </p>
   <p>
-    <%= f.label :body, "Your Comment" %><br/>
+    <%= f.label :body, "Tavo Komentaras" %><br/>
     <%= f.text_area :body %>
   </p>
   <p>
-    <%= f.submit 'Submit' %>
+    <%= f.submit 'Komentuoti' %>
   </p>
 <% end %>
