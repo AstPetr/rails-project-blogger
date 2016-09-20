@@ -6,10 +6,12 @@
 	<% end %>
 </p>
 <p><%= @article.body %></p>
+<hr></hr>
 <h3>Komentarai (<%= @article.comments.size %>)</h3>
 <%= render partial: 'articles/comment', collection: @article.comments %>
+<hr></hr>
 <%= render partial: 'comments/form' %>
-
+<hr></hr>
 <%= link_to "<< Atgal į straipsnių sąrašą", articles_path %>
 <%= link_to "Redaguoti ", edit_article_path(@article) %>
 <%= link_to "Ištrinti", article_path(@article), method: :delete, data: {confirm: "Ar tikrai ištrinti straipsnį?"} %>

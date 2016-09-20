@@ -2,10 +2,10 @@
 
 <ul id="tags">
 	<% @tags.each do |tag| %>
-		<li><%= link_to tag, tag_path(tag) %></li>
+		<li class="tag"><%= link_to tag, tag_path(tag) %></li>
 		<%= link_to "ištrinti", tag_path(tag), method: :delete %>
 	<% end %>
 </ul>
 
-
+<hr></hr>
 <%= link_to "<< Atgal į straipsnių sąrašą", articles_path %>

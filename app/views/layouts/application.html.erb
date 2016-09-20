@@ -6,10 +6,34 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald:300,400|Roboto:100,300,400&subset=latin-ext" rel="stylesheet"> 
   </head>
 
   <body>
-	<p class="flash"><%= flash.notice %></p>
-    <%= yield %>
+    
+<div class="container">
+      <div class="header">
+        <h1 class="header-heading">RAILS</h1>
+      </div>
+
+      <div class="nav-bar">
+        <ul class="nav">
+          <li><%= link_to "Straipsniai", articles_path %></li>
+          <li><%= link_to "Antraštės", tags_path %></li>
+          <li><%= link_to "Naujas", new_article_path %></li>
+          
+        </ul>
+      </div>
+
+      <div class="content">
+        <%= yield %>
+      </div>
+      <p class="flash"><%= flash.notice %></p>
+      <div class="footer">
+        &copy; Copyright 2016
+      </div></div>
+    
   </body>
 </html>
