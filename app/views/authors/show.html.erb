@@ -1,0 +1,14 @@
+<!-- <p id="notice"><%= notice %></p> -->
+
+<p>
+  <strong>Vardas:</strong>
+  <%= @author.username %>
+</p>
+
+<p>
+  <strong>El. Paštas:</strong>
+  <%= @author.email %>
+</p>
+
+<%= link_to '<< Atgal', authors_path %> |
+<%= link_to 'Redaguoti', edit_author_path(@author) %> 

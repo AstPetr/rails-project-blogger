@@ -1,0 +1,37 @@
+<%= form_for(author) do |f| %>
+  <% if author.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(author.errors.count, "error") %> prohibited this author from being saved:</h2>
+
+      <ul>
+      <% author.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label :username, "Vardas" %></br>
+    <%= f.text_field :username %>
+  </p>
+
+  <p>
+    <%= f.label :email, "Elektroninis Paštas" %></br>
+    <%= f.text_field :email %>
+  </p>
+
+  <p>
+    <%= f.label :password, "Slaptažodis" %></br>
+    <%= f.password_field :password %>
+  </p>
+
+  <p>
+    <%= f.label :password_confirmation, "Slaptažodžio Patvirtinimas" %></br>
+    <%= f.password_field :password_confirmation %>
+  </p>
+
+  <p>
+    <%= f.submit 'Siųsti', class: 'btn'%>
+  </p>
+<% end %>

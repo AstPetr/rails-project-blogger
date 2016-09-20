@@ -1,0 +1,29 @@
+<!-- <p id="notice"><%= notice %></p> -->
+
+<h1>Autoriai</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Vardas</th>
+      <th>El. Paštas</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @authors.each do |author| %>
+      <tr>
+        <td><%= author.username %></td>
+        <td><%= author.email %></td>
+        <td><%= link_to 'Rodyti', author %></td>
+        <td><%= link_to 'Redaguoti', edit_author_path(author) %></td>
+        <td><%= link_to 'Ištrinti', author, method: :delete, data: { confirm: 'Ar esi tikrai nori ištrinti autorių?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Naujas Autorius', new_author_path %>

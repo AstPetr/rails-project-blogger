@@ -22,15 +22,27 @@
         <ul class="nav">
           <li><%= link_to "Straipsniai", articles_path %></li>
           <li><%= link_to "Antraštės", tags_path %></li>
-          <li><%= link_to "Naujas", new_article_path %></li>
+          <% if logged_in? %>
+            <li><%= link_to "Naujas", new_article_path %></li>
+          <% end %>
           
         </ul>
       </div>
 
       <div class="content">
+      <p class="flash"><%= flash.notice %></p>
+      <h6>
+        <% if logged_in? %>
+          <%= "#{current_user.email}" %>
+          <%= link_to "| Atsijunk", logout_path %>
+        <% else %>
+          <%= link_to "Prisijunk", login_path %>
+        <% end %>
+      </h6><hr>
+      <!-- <hr> -->
         <%= yield %>
       </div>
-      <p class="flash"><%= flash.notice %></p>
+
       <div class="footer">
         &copy; Copyright 2016
       </div></div>
