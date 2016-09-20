@@ -5,6 +5,9 @@
 		<%= link_to tag.name, tag_path(tag) %>
 	<% end %>
 </p>
+<% if @article.image.exists? %>
+	<p><%= image_tag @article.image.url, class: 'image-medium' %></p>
+<% end %>
 <p><%= @article.body %></p>
 <hr></hr>
 <h3>Komentarai (<%= @article.comments.size %>)</h3>
