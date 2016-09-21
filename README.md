@@ -1,4 +1,5 @@
 # README
 
 Nuorada į veikiančią versiją <br />
-https://limitless-time-82393.herokuapp.com/
+
+https://pure-headland-94445.herokuapp.com/
